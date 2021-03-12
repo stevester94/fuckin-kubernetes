@@ -13,15 +13,10 @@ sudo dnf config-manager \
     --add-repo \
     https://download.docker.com/linux/fedora/docker-ce.repo
 
-#sudo dnf install -y \
-#        docker-ce-3:19.03.15-3.fc31.x86_64 \
-#        docker-ce-cli-1:19.03.15-3.fc31.x86_64 \
-#        containerd.io
-
 sudo dnf install -y \
-        docker-ce \
-        docker-ce-cli \
-        containerd.io
+        docker-ce-3:20.10.3-3.fc31 \
+        docker-ce-cli-1:20.10.3-3.fc31 \
+        containerd.io-1.4.3-3.1.fc31
 
 sudo dnf install -y iproute-tc
 
