@@ -1,3 +1,5 @@
+set -eou pipefail
+
 master_hostname=192.168.1.42
 
 sudo yum install -y tmux vim
@@ -25,10 +27,6 @@ sudo sysctl --system
 
 
 sudo yum remove -y podman containerd
-
-sudo yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
 
 sudo yum install -y containerd
 
@@ -63,7 +61,7 @@ sudo sysctl --system
 sudo setenforce 0
 sudo sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
 
-sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+sudo yum install -y kubelet kubernetes-cni kubeadm kubectl --disableexcludes=kubernetes
 
 sudo systemctl disable --now firewalld
 

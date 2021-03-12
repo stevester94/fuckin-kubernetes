@@ -1,2 +1,2 @@
-scp bootstrap_master*.bash apl_user@master:~
-scp bootstrap_worker.bash apl_user@worker-1:~
+scp bootstrap_master*.bash master:~
+scp bootstrap_worker.bash worker-1:~
