@@ -1,2 +1,2 @@
-scp bootstrap_master*.bash master:~
-scp bootstrap_worker.bash worker-1:~
+scp bootstrap.bash master:~
+scp bootstrap.bash worker-1:~
