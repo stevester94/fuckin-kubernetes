@@ -1,0 +1,713 @@
+Name:                 coredns-74ff55c5b-dt4b5
+Namespace:            kube-system
+Priority:             2000000000
+Priority Class Name:  system-cluster-critical
+Node:                 master/192.168.1.42
+Start Time:           Thu, 11 Mar 2021 16:04:51 -0800
+Labels:               k8s-app=kube-dns
+                      pod-template-hash=74ff55c5b
+Annotations:          <none>
+Status:               Running
+IP:                   10.32.0.3
+IPs:
+  IP:           10.32.0.3
+Controlled By:  ReplicaSet/coredns-74ff55c5b
+Containers:
+  coredns:
+    Container ID:  containerd://56e76a632d9b7ad630c3179a77dee2287e886bfecc7539be45d50c8790fb4d83
+    Image:         k8s.gcr.io/coredns:1.7.0
+    Image ID:      k8s.gcr.io/coredns@sha256:73ca82b4ce829766d4f1f10947c3a338888f876fbed0540dc849c89ff256e90c
+    Ports:         53/UDP, 53/TCP, 9153/TCP
+    Host Ports:    0/UDP, 0/TCP, 0/TCP
+    Args:
+      -conf
+      /etc/coredns/Corefile
+    State:          Running
+      Started:      Thu, 11 Mar 2021 16:04:52 -0800
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      memory:  170Mi
+    Requests:
+      cpu:        100m
+      memory:     70Mi
+    Liveness:     http-get http://:8080/health delay=60s timeout=5s period=10s #success=1 #failure=5
+    Readiness:    http-get http://:8181/ready delay=0s timeout=1s period=10s #success=1 #failure=3
+    Environment:  <none>
+    Mounts:
+      /etc/coredns from config-volume (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from coredns-token-w2fxw (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  config-volume:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      coredns
+    Optional:  false
+  coredns-token-w2fxw:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  coredns-token-w2fxw
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  kubernetes.io/os=linux
+Tolerations:     CriticalAddonsOnly op=Exists
+                 node-role.kubernetes.io/control-plane:NoSchedule
+                 node-role.kubernetes.io/master:NoSchedule
+                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  98s   default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  98s   default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.
+  Normal   Scheduled         81s   default-scheduler  Successfully assigned kube-system/coredns-74ff55c5b-dt4b5 to master
+  Normal   Pulled            80s   kubelet            Container image "k8s.gcr.io/coredns:1.7.0" already present on machine
+  Normal   Created           80s   kubelet            Created container coredns
+  Normal   Started           80s   kubelet            Started container coredns
+
+
+Name:                 coredns-74ff55c5b-nxq7c
+Namespace:            kube-system
+Priority:             2000000000
+Priority Class Name:  system-cluster-critical
+Node:                 master/192.168.1.42
+Start Time:           Thu, 11 Mar 2021 16:04:51 -0800
+Labels:               k8s-app=kube-dns
+                      pod-template-hash=74ff55c5b
+Annotations:          <none>
+Status:               Running
+IP:                   10.32.0.2
+IPs:
+  IP:           10.32.0.2
+Controlled By:  ReplicaSet/coredns-74ff55c5b
+Containers:
+  coredns:
+    Container ID:  containerd://334dcdfae03942d7c7303f153f19e4c6b3cdfc258da83790cfadfca3fd673a08
+    Image:         k8s.gcr.io/coredns:1.7.0
+    Image ID:      k8s.gcr.io/coredns@sha256:73ca82b4ce829766d4f1f10947c3a338888f876fbed0540dc849c89ff256e90c
+    Ports:         53/UDP, 53/TCP, 9153/TCP
+    Host Ports:    0/UDP, 0/TCP, 0/TCP
+    Args:
+      -conf
+      /etc/coredns/Corefile
+    State:          Running
+      Started:      Thu, 11 Mar 2021 16:04:52 -0800
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      memory:  170Mi
+    Requests:
+      cpu:        100m
+      memory:     70Mi
+    Liveness:     http-get http://:8080/health delay=60s timeout=5s period=10s #success=1 #failure=5
+    Readiness:    http-get http://:8181/ready delay=0s timeout=1s period=10s #success=1 #failure=3
+    Environment:  <none>
+    Mounts:
+      /etc/coredns from config-volume (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from coredns-token-w2fxw (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  config-volume:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      coredns
+    Optional:  false
+  coredns-token-w2fxw:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  coredns-token-w2fxw
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  kubernetes.io/os=linux
+Tolerations:     CriticalAddonsOnly op=Exists
+                 node-role.kubernetes.io/control-plane:NoSchedule
+                 node-role.kubernetes.io/master:NoSchedule
+                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age   From               Message
+  ----     ------            ----  ----               -------
+  Warning  FailedScheduling  98s   default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.
+  Warning  FailedScheduling  98s   default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.
+  Normal   Scheduled         81s   default-scheduler  Successfully assigned kube-system/coredns-74ff55c5b-nxq7c to master
+  Normal   Pulled            80s   kubelet            Container image "k8s.gcr.io/coredns:1.7.0" already present on machine
+  Normal   Created           80s   kubelet            Created container coredns
+  Normal   Started           80s   kubelet            Started container coredns
+
+
+Name:                 etcd-master
+Namespace:            kube-system
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Node:                 master/192.168.1.42
+Start Time:           Thu, 11 Mar 2021 16:04:27 -0800
+Labels:               component=etcd
+                      tier=control-plane
+Annotations:          kubeadm.kubernetes.io/etcd.advertise-client-urls: https://192.168.1.42:2379
+                      kubernetes.io/config.hash: 830fb4886c9f9b6d4fa6f2d227826751
+                      kubernetes.io/config.mirror: 830fb4886c9f9b6d4fa6f2d227826751
+                      kubernetes.io/config.seen: 2021-03-11T16:04:21.373075340-08:00
+                      kubernetes.io/config.source: file
+Status:               Running
+IP:                   192.168.1.42
+IPs:
+  IP:           192.168.1.42
+Controlled By:  Node/master
+Containers:
+  etcd:
+    Container ID:  containerd://28f6290a4627d4399adfff1ef0cf1ef7f586de341a5561cbca5575668a351a2e
+    Image:         k8s.gcr.io/etcd:3.4.13-0
+    Image ID:      k8s.gcr.io/etcd@sha256:4ad90a11b55313b182afc186b9876c8e891531b8db4c9bf1541953021618d0e2
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      etcd
+      --advertise-client-urls=https://192.168.1.42:2379
+      --cert-file=/etc/kubernetes/pki/etcd/server.crt
+      --client-cert-auth=true
+      --data-dir=/var/lib/etcd
+      --initial-advertise-peer-urls=https://192.168.1.42:2380
+      --initial-cluster=master=https://192.168.1.42:2380
+      --key-file=/etc/kubernetes/pki/etcd/server.key
+      --listen-client-urls=https://127.0.0.1:2379,https://192.168.1.42:2379
+      --listen-metrics-urls=http://127.0.0.1:2381
+      --listen-peer-urls=https://192.168.1.42:2380
+      --name=master
+      --peer-cert-file=/etc/kubernetes/pki/etcd/peer.crt
+      --peer-client-cert-auth=true
+      --peer-key-file=/etc/kubernetes/pki/etcd/peer.key
+      --peer-trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt
+      --snapshot-count=10000
+      --trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt
+    State:          Running
+      Started:      Thu, 11 Mar 2021 16:04:00 -0800
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:                100m
+      ephemeral-storage:  100Mi
+      memory:             100Mi
+    Liveness:             http-get http://127.0.0.1:2381/health delay=10s timeout=15s period=10s #success=1 #failure=8
+    Startup:              http-get http://127.0.0.1:2381/health delay=10s timeout=15s period=10s #success=1 #failure=24
+    Environment:          <none>
+    Mounts:
+      /etc/kubernetes/pki/etcd from etcd-certs (rw)
+      /var/lib/etcd from etcd-data (rw)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  etcd-certs:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/kubernetes/pki/etcd
+    HostPathType:  DirectoryOrCreate
+  etcd-data:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/lib/etcd
+    HostPathType:  DirectoryOrCreate
+QoS Class:         Burstable
+Node-Selectors:    <none>
+Tolerations:       :NoExecute op=Exists
+Events:            <none>
+
+
+Name:                 kube-apiserver-master
+Namespace:            kube-system
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Node:                 master/192.168.1.42
+Start Time:           Thu, 11 Mar 2021 16:04:27 -0800
+Labels:               component=kube-apiserver
+                      tier=control-plane
+Annotations:          kubeadm.kubernetes.io/kube-apiserver.advertise-address.endpoint: 192.168.1.42:6443
+                      kubernetes.io/config.hash: 293f2830c413b3582146b6b6ea82dd9a
+                      kubernetes.io/config.mirror: 293f2830c413b3582146b6b6ea82dd9a
+                      kubernetes.io/config.seen: 2021-03-11T16:04:21.373062466-08:00
+                      kubernetes.io/config.source: file
+Status:               Running
+IP:                   192.168.1.42
+IPs:
+  IP:           192.168.1.42
+Controlled By:  Node/master
+Containers:
+  kube-apiserver:
+    Container ID:  containerd://748d3939ec5cf019bcb8558734cd55b826262702f613bb1316b641c9213d23b4
+    Image:         k8s.gcr.io/kube-apiserver:v1.20.4
+    Image ID:      k8s.gcr.io/kube-apiserver@sha256:adef5d31ea2fcf9c523e47bbcc6a955f3c247abbd8a9a97f4a26fdeb18f9b4b8
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      kube-apiserver
+      --advertise-address=192.168.1.42
+      --allow-privileged=true
+      --authorization-mode=Node,RBAC
+      --client-ca-file=/etc/kubernetes/pki/ca.crt
+      --enable-admission-plugins=NodeRestriction
+      --enable-bootstrap-token-auth=true
+      --etcd-cafile=/etc/kubernetes/pki/etcd/ca.crt
+      --etcd-certfile=/etc/kubernetes/pki/apiserver-etcd-client.crt
+      --etcd-keyfile=/etc/kubernetes/pki/apiserver-etcd-client.key
+      --etcd-servers=https://127.0.0.1:2379
+      --insecure-port=0
+      --kubelet-client-certificate=/etc/kubernetes/pki/apiserver-kubelet-client.crt
+      --kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key
+      --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+      --proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt
+      --proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key
+      --requestheader-allowed-names=front-proxy-client
+      --requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt
+      --requestheader-extra-headers-prefix=X-Remote-Extra-
+      --requestheader-group-headers=X-Remote-Group
+      --requestheader-username-headers=X-Remote-User
+      --secure-port=6443
+      --service-account-issuer=https://kubernetes.default.svc.cluster.local
+      --service-account-key-file=/etc/kubernetes/pki/sa.pub
+      --service-account-signing-key-file=/etc/kubernetes/pki/sa.key
+      --service-cluster-ip-range=10.96.0.0/12
+      --tls-cert-file=/etc/kubernetes/pki/apiserver.crt
+      --tls-private-key-file=/etc/kubernetes/pki/apiserver.key
+    State:          Running
+      Started:      Thu, 11 Mar 2021 16:04:10 -0800
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        250m
+    Liveness:     http-get https://192.168.1.42:6443/livez delay=10s timeout=15s period=10s #success=1 #failure=8
+    Readiness:    http-get https://192.168.1.42:6443/readyz delay=0s timeout=15s period=1s #success=1 #failure=3
+    Startup:      http-get https://192.168.1.42:6443/livez delay=10s timeout=15s period=10s #success=1 #failure=24
+    Environment:  <none>
+    Mounts:
+      /etc/kubernetes/pki from k8s-certs (ro)
+      /etc/pki from etc-pki (ro)
+      /etc/ssl/certs from ca-certs (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  ca-certs:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/ssl/certs
+    HostPathType:  DirectoryOrCreate
+  etc-pki:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/pki
+    HostPathType:  DirectoryOrCreate
+  k8s-certs:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/kubernetes/pki
+    HostPathType:  DirectoryOrCreate
+QoS Class:         Burstable
+Node-Selectors:    <none>
+Tolerations:       :NoExecute op=Exists
+Events:            <none>
+
+
+Name:                 kube-controller-manager-master
+Namespace:            kube-system
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Node:                 master/192.168.1.42
+Start Time:           Thu, 11 Mar 2021 16:04:27 -0800
+Labels:               component=kube-controller-manager
+                      tier=control-plane
+Annotations:          kubernetes.io/config.hash: 7a63e9f1d816f5a6e2bb09b586ee5c0c
+                      kubernetes.io/config.mirror: 7a63e9f1d816f5a6e2bb09b586ee5c0c
+                      kubernetes.io/config.seen: 2021-03-11T16:04:21.373071302-08:00
+                      kubernetes.io/config.source: file
+Status:               Running
+IP:                   192.168.1.42
+IPs:
+  IP:           192.168.1.42
+Controlled By:  Node/master
+Containers:
+  kube-controller-manager:
+    Container ID:  containerd://b12850357724c6577047e7ad278b0224d096962c51a20c2f6f4829aa8f4a4cce
+    Image:         k8s.gcr.io/kube-controller-manager:v1.20.4
+    Image ID:      k8s.gcr.io/kube-controller-manager@sha256:37a251ee07e626fb34dfcd40957a92cf1711e22fade74295f03de8cb6a842845
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      kube-controller-manager
+      --authentication-kubeconfig=/etc/kubernetes/controller-manager.conf
+      --authorization-kubeconfig=/etc/kubernetes/controller-manager.conf
+      --bind-address=127.0.0.1
+      --client-ca-file=/etc/kubernetes/pki/ca.crt
+      --cluster-name=kubernetes
+      --cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt
+      --cluster-signing-key-file=/etc/kubernetes/pki/ca.key
+      --controllers=*,bootstrapsigner,tokencleaner
+      --kubeconfig=/etc/kubernetes/controller-manager.conf
+      --leader-elect=true
+      --port=0
+      --requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt
+      --root-ca-file=/etc/kubernetes/pki/ca.crt
+      --service-account-private-key-file=/etc/kubernetes/pki/sa.key
+      --use-service-account-credentials=true
+    State:          Running
+      Started:      Thu, 11 Mar 2021 16:04:28 -0800
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        200m
+    Liveness:     http-get https://127.0.0.1:10257/healthz delay=10s timeout=15s period=10s #success=1 #failure=8
+    Startup:      http-get https://127.0.0.1:10257/healthz delay=10s timeout=15s period=10s #success=1 #failure=24
+    Environment:  <none>
+    Mounts:
+      /etc/kubernetes/controller-manager.conf from kubeconfig (ro)
+      /etc/kubernetes/pki from k8s-certs (ro)
+      /etc/pki from etc-pki (ro)
+      /etc/ssl/certs from ca-certs (ro)
+      /usr/libexec/kubernetes/kubelet-plugins/volume/exec from flexvolume-dir (rw)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  ca-certs:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/ssl/certs
+    HostPathType:  DirectoryOrCreate
+  etc-pki:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/pki
+    HostPathType:  DirectoryOrCreate
+  flexvolume-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /usr/libexec/kubernetes/kubelet-plugins/volume/exec
+    HostPathType:  DirectoryOrCreate
+  k8s-certs:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/kubernetes/pki
+    HostPathType:  DirectoryOrCreate
+  kubeconfig:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/kubernetes/controller-manager.conf
+    HostPathType:  FileOrCreate
+QoS Class:         Burstable
+Node-Selectors:    <none>
+Tolerations:       :NoExecute op=Exists
+Events:
+  Type    Reason   Age   From     Message
+  ----    ------   ----  ----     -------
+  Normal  Pulled   104s  kubelet  Container image "k8s.gcr.io/kube-controller-manager:v1.20.4" already present on machine
+  Normal  Created  104s  kubelet  Created container kube-controller-manager
+  Normal  Started  104s  kubelet  Started container kube-controller-manager
+
+
+Name:                 kube-proxy-942b2
+Namespace:            kube-system
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Node:                 master/192.168.1.42
+Start Time:           Thu, 11 Mar 2021 16:04:33 -0800
+Labels:               controller-revision-hash=9978ddf98
+                      k8s-app=kube-proxy
+                      pod-template-generation=1
+Annotations:          <none>
+Status:               Running
+IP:                   192.168.1.42
+IPs:
+  IP:           192.168.1.42
+Controlled By:  DaemonSet/kube-proxy
+Containers:
+  kube-proxy:
+    Container ID:  containerd://292d4caaca529f8b48c4486940f23ed2efd35ebd735045cf95cc5f5a126f179c
+    Image:         k8s.gcr.io/kube-proxy:v1.20.4
+    Image ID:      k8s.gcr.io/kube-proxy@sha256:454050a55141f5f77ef30a6d2aa8ee41c6dc03e307f4f2558498099493087cc4
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /usr/local/bin/kube-proxy
+      --config=/var/lib/kube-proxy/config.conf
+      --hostname-override=$(NODE_NAME)
+    State:          Running
+      Started:      Thu, 11 Mar 2021 16:04:34 -0800
+    Ready:          True
+    Restart Count:  0
+    Environment:
+      NODE_NAME:   (v1:spec.nodeName)
+    Mounts:
+      /lib/modules from lib-modules (ro)
+      /run/xtables.lock from xtables-lock (rw)
+      /var/lib/kube-proxy from kube-proxy (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-proxy-token-kk5hd (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-proxy:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      kube-proxy
+    Optional:  false
+  xtables-lock:
+    Type:          HostPath (bare host directory volume)
+    Path:          /run/xtables.lock
+    HostPathType:  FileOrCreate
+  lib-modules:
+    Type:          HostPath (bare host directory volume)
+    Path:          /lib/modules
+    HostPathType:  
+  kube-proxy-token-kk5hd:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  kube-proxy-token-kk5hd
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  kubernetes.io/os=linux
+Tolerations:     op=Exists
+                 CriticalAddonsOnly op=Exists
+                 node.kubernetes.io/disk-pressure:NoSchedule op=Exists
+                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                 node.kubernetes.io/network-unavailable:NoSchedule op=Exists
+                 node.kubernetes.io/not-ready:NoExecute op=Exists
+                 node.kubernetes.io/pid-pressure:NoSchedule op=Exists
+                 node.kubernetes.io/unreachable:NoExecute op=Exists
+                 node.kubernetes.io/unschedulable:NoSchedule op=Exists
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  98s   default-scheduler  Successfully assigned kube-system/kube-proxy-942b2 to master
+  Normal  Pulled     98s   kubelet            Container image "k8s.gcr.io/kube-proxy:v1.20.4" already present on machine
+  Normal  Created    98s   kubelet            Created container kube-proxy
+  Normal  Started    98s   kubelet            Started container kube-proxy
+
+
+Name:                 kube-scheduler-master
+Namespace:            kube-system
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Node:                 master/192.168.1.42
+Start Time:           Thu, 11 Mar 2021 16:04:27 -0800
+Labels:               component=kube-scheduler
+                      tier=control-plane
+Annotations:          kubernetes.io/config.hash: 90280dfce8bf44f46a3e41b6c4a9f551
+                      kubernetes.io/config.mirror: 90280dfce8bf44f46a3e41b6c4a9f551
+                      kubernetes.io/config.seen: 2021-03-11T16:04:21.373073346-08:00
+                      kubernetes.io/config.source: file
+Status:               Running
+IP:                   192.168.1.42
+IPs:
+  IP:           192.168.1.42
+Controlled By:  Node/master
+Containers:
+  kube-scheduler:
+    Container ID:  containerd://af992df489ce5df0de915b1f0e3db98c9af0a0ddc228b0d8cd9090c3e7201db8
+    Image:         k8s.gcr.io/kube-scheduler:v1.20.4
+    Image ID:      k8s.gcr.io/kube-scheduler@sha256:e2e827b27282f0e36f40a9edc910630ba6124f78d572006f3d25bb000f7018ad
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      kube-scheduler
+      --authentication-kubeconfig=/etc/kubernetes/scheduler.conf
+      --authorization-kubeconfig=/etc/kubernetes/scheduler.conf
+      --bind-address=127.0.0.1
+      --kubeconfig=/etc/kubernetes/scheduler.conf
+      --leader-elect=true
+      --port=0
+    State:          Running
+      Started:      Thu, 11 Mar 2021 16:04:28 -0800
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:        100m
+    Liveness:     http-get https://127.0.0.1:10259/healthz delay=10s timeout=15s period=10s #success=1 #failure=8
+    Startup:      http-get https://127.0.0.1:10259/healthz delay=10s timeout=15s period=10s #success=1 #failure=24
+    Environment:  <none>
+    Mounts:
+      /etc/kubernetes/scheduler.conf from kubeconfig (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kubeconfig:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/kubernetes/scheduler.conf
+    HostPathType:  FileOrCreate
+QoS Class:         Burstable
+Node-Selectors:    <none>
+Tolerations:       :NoExecute op=Exists
+Events:
+  Type    Reason   Age   From     Message
+  ----    ------   ----  ----     -------
+  Normal  Pulled   104s  kubelet  Container image "k8s.gcr.io/kube-scheduler:v1.20.4" already present on machine
+  Normal  Created  104s  kubelet  Created container kube-scheduler
+  Normal  Started  104s  kubelet  Started container kube-scheduler
+
+
+Name:                 weave-net-bl2sk
+Namespace:            kube-system
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Node:                 master/192.168.1.42
+Start Time:           Thu, 11 Mar 2021 16:04:33 -0800
+Labels:               controller-revision-hash=7fc97667bc
+                      name=weave-net
+                      pod-template-generation=1
+Annotations:          <none>
+Status:               Running
+IP:                   192.168.1.42
+IPs:
+  IP:           192.168.1.42
+Controlled By:  DaemonSet/weave-net
+Init Containers:
+  weave-init:
+    Container ID:  containerd://99786694803c498790aab6b4d354498e11642e682f7c6e8fedb504ae97b461b4
+    Image:         docker.io/weaveworks/weave-kube:2.8.1
+    Image ID:      docker.io/weaveworks/weave-kube@sha256:d797338e7beb17222e10757b71400d8471bdbd9be13b5da38ce2ebf597fb4e63
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /home/weave/init.sh
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Thu, 11 Mar 2021 16:04:39 -0800
+      Finished:     Thu, 11 Mar 2021 16:04:40 -0800
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /host/etc from cni-conf (rw)
+      /host/home from cni-bin2 (rw)
+      /host/opt from cni-bin (rw)
+      /lib/modules from lib-modules (rw)
+      /run/xtables.lock from xtables-lock (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from weave-net-token-r9fpn (ro)
+Containers:
+  weave:
+    Container ID:  containerd://92d5a0817b0ffa64301cd4c3cca8863f8f3727fd5e7b2cd700644c8bca2bd0d5
+    Image:         docker.io/weaveworks/weave-kube:2.8.1
+    Image ID:      docker.io/weaveworks/weave-kube@sha256:d797338e7beb17222e10757b71400d8471bdbd9be13b5da38ce2ebf597fb4e63
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      /home/weave/launch.sh
+    State:          Running
+      Started:      Thu, 11 Mar 2021 16:04:44 -0800
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Thu, 11 Mar 2021 16:04:40 -0800
+      Finished:     Thu, 11 Mar 2021 16:04:40 -0800
+    Ready:          True
+    Restart Count:  1
+    Requests:
+      cpu:      50m
+      memory:   100Mi
+    Readiness:  http-get http://127.0.0.1:6784/status delay=0s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      HOSTNAME:         (v1:spec.nodeName)
+      INIT_CONTAINER:  true
+    Mounts:
+      /host/etc/machine-id from machine-id (ro)
+      /host/var/lib/dbus from dbus (rw)
+      /run/xtables.lock from xtables-lock (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from weave-net-token-r9fpn (ro)
+      /weavedb from weavedb (rw)
+  weave-npc:
+    Container ID:   containerd://fdbe2e51a9659f3d9303c9c87942f94a883523816f01dba8904969c4fbebe5e7
+    Image:          docker.io/weaveworks/weave-npc:2.8.1
+    Image ID:       docker.io/weaveworks/weave-npc@sha256:38d3e30a97a2260558f8deb0fc4c079442f7347f27c86660dbfc8ca91674f14c
+    Port:           <none>
+    Host Port:      <none>
+    State:          Running
+      Started:      Thu, 11 Mar 2021 16:04:44 -0800
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:     50m
+      memory:  100Mi
+    Environment:
+      HOSTNAME:   (v1:spec.nodeName)
+    Mounts:
+      /run/xtables.lock from xtables-lock (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from weave-net-token-r9fpn (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  weavedb:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/lib/weave
+    HostPathType:  
+  cni-bin:
+    Type:          HostPath (bare host directory volume)
+    Path:          /opt
+    HostPathType:  
+  cni-bin2:
+    Type:          HostPath (bare host directory volume)
+    Path:          /home
+    HostPathType:  
+  cni-conf:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc
+    HostPathType:  
+  dbus:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/lib/dbus
+    HostPathType:  
+  lib-modules:
+    Type:          HostPath (bare host directory volume)
+    Path:          /lib/modules
+    HostPathType:  
+  machine-id:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/machine-id
+    HostPathType:  FileOrCreate
+  xtables-lock:
+    Type:          HostPath (bare host directory volume)
+    Path:          /run/xtables.lock
+    HostPathType:  FileOrCreate
+  weave-net-token-r9fpn:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  weave-net-token-r9fpn
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     :NoSchedule op=Exists
+                 :NoExecute op=Exists
+                 node.kubernetes.io/disk-pressure:NoSchedule op=Exists
+                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                 node.kubernetes.io/network-unavailable:NoSchedule op=Exists
+                 node.kubernetes.io/not-ready:NoExecute op=Exists
+                 node.kubernetes.io/pid-pressure:NoSchedule op=Exists
+                 node.kubernetes.io/unreachable:NoExecute op=Exists
+                 node.kubernetes.io/unschedulable:NoSchedule op=Exists
+Events:
+  Type    Reason     Age                From               Message
+  ----    ------     ----               ----               -------
+  Normal  Scheduled  98s                default-scheduler  Successfully assigned kube-system/weave-net-bl2sk to master
+  Normal  Pulling    98s                kubelet            Pulling image "docker.io/weaveworks/weave-kube:2.8.1"
+  Normal  Pulled     94s                kubelet            Successfully pulled image "docker.io/weaveworks/weave-kube:2.8.1" in 4.513263123s
+  Normal  Created    94s                kubelet            Created container weave-init
+  Normal  Started    93s                kubelet            Started container weave-init
+  Normal  Pulling    92s                kubelet            Pulling image "docker.io/weaveworks/weave-npc:2.8.1"
+  Normal  Pulled     88s (x2 over 92s)  kubelet            Container image "docker.io/weaveworks/weave-kube:2.8.1" already present on machine
+  Normal  Created    88s (x2 over 92s)  kubelet            Created container weave
+  Normal  Started    88s (x2 over 92s)  kubelet            Started container weave
+  Normal  Pulled     88s                kubelet            Successfully pulled image "docker.io/weaveworks/weave-npc:2.8.1" in 3.263923404s
+  Normal  Created    88s                kubelet            Created container weave-npc
+  Normal  Started    88s                kubelet            Started container weave-npc

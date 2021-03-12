@@ -1,0 +1,19 @@
+-rwxr-xr-x. 1 root root  3254624 Sep  9  2020 bandwidth
+-rwxr-xr-x. 1 root root  3581192 Sep  9  2020 bridge
+-rwxr-xr-x. 1 root root  9837552 Sep  9  2020 dhcp
+-rwxr-xr-x. 1 root root  4699824 Sep  9  2020 firewall
+-rwxr-xr-x. 1 root root  2650368 Sep  9  2020 flannel
+-rwxr-xr-x. 1 root root  3274160 Sep  9  2020 host-device
+-rwxr-xr-x. 1 root root  2847152 Sep  9  2020 host-local
+-rwxr-xr-x. 1 root root  3377272 Sep  9  2020 ipvlan
+-rwxr-xr-x. 1 root root  2715600 Sep  9  2020 loopback
+-rwxr-xr-x. 1 root root  3440168 Sep  9  2020 macvlan
+-rwxr-xr-x. 1 root root  3048528 Sep  9  2020 portmap
+-rwxr-xr-x. 1 root root  3528800 Sep  9  2020 ptp
+-rwxr-xr-x. 1 root root  2849328 Sep  9  2020 sbr
+-rwxr-xr-x. 1 root root  2503512 Sep  9  2020 static
+-rwxr-xr-x. 1 root root  2820128 Sep  9  2020 tuning
+-rwxr-xr-x. 1 root root  3377120 Sep  9  2020 vlan
+lrwxrwxrwx. 1 root root       18 Mar 11 16:04 weave-ipam -> weave-plugin-2.8.1
+lrwxrwxrwx. 1 root root       18 Mar 11 16:04 weave-net -> weave-plugin-2.8.1
+-rwxr-xr-x. 1 root root 11437320 Mar 11 16:04 weave-plugin-2.8.1
