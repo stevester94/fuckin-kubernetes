@@ -1,0 +1,11 @@
+./libnetfilter_queue-1.0.2-16.fc33.x86_64.rpm
+./crictl-v1.17.0-Linux-amd64.tar.gz
+./10-kubeadm.conf
+./kubeadm
+./kubectl
+./conntrack-tools-1.4.5-6.fc33.x86_64.rpm
+./libnetfilter_cthelper-1.0.0-18.fc33.x86_64.rpm
+./cni-plugins-Linux-amd64-v0.8.2.tgz
+./libnetfilter_cttimeout-devel-1.0.0-16.fc33.x86_64.rpm
+./kubelet
+./kubelet.service
