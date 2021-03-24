@@ -1,4 +1,4 @@
-scp bootstrap.stage_*.bash root@master:~
-scp FC33_packages/* root@master:~
-scp bootstrap.stage_*.bash root@worker:~
-scp FC33_packages/* root@worker:~
+scp bootstrap.bash root@master:~
+scp packages/* root@master:~
+scp bootstrap.bash root@worker:~
+scp packages/* root@worker:~

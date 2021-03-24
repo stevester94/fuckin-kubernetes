@@ -77,10 +77,13 @@ if [[ $1 == "master" ]]; then
     kubectl taint nodes --all node-role.kubernetes.io/master-
 
     kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
-    
+   
+    # This is a work around for the non-addressable DNS server issue. I think it has to do with
+    # the coreDNS pods getting an IP from the kubernetes default CNI Plugin, and that IP is not assigned by weave so uh it's not routable... 
+
     # There's a bit of a race condition since the API doesn't even return any pods for a bit.
     # This sleep seems like a lot, but we have to wait for weave to deploy anyways so its not so bad
-    echo "Waiting for weave to come up before redeploying coredns"
+    echo "Waiting for all system pods (IE Weave) to come up before redeploying coredns"
     sleep 15
     kubectl wait --namespace=kube-system --for=condition=Ready --timeout=-1s --all pods
 

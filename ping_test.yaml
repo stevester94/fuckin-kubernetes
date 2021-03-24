@@ -1,0 +1,57 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: steves-service
+spec:
+  selector:
+    app: steves-app
+  clusterIP: None
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: steve-pod-1
+  labels:
+    app: steves-app
+spec:
+  hostname: steve-pod-1
+  subdomain: steves-service
+  containers:
+  - image: centos:latest
+    name: c1
+    command: ["bash", "-c", "while true; do ping -c 1 steve-pod-2.steves-service; done"]
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - steves-app
+        topologyKey: "kubernetes.io/hostname"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: steve-pod-2
+  labels:
+    app: steves-app
+spec:
+  hostname: steve-pod-2
+  subdomain: steves-service
+  containers:
+  - image: centos:latest
+    name: c1
+    command: ["bash", "-c", "while true; do ping -c 1 steve-pod-1.steves-service; done"]
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - steves-app
+        topologyKey: "kubernetes.io/hostname"
