@@ -1,4 +1,4 @@
-wget https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/33/Everything/x86_64/os/Packages/l/libnetfilter_cttimeout-devel-1.0.0-16.fc33.x86_64.rpm
+wget https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/33/Everything/x86_64/os/Packages/l/libnetfilter_cttimeout-1.0.0-16.fc33.x86_64.rpm
 wget https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/33/Everything/x86_64/os/Packages/l/libnetfilter_queue-1.0.2-16.fc33.x86_64.rpm
 wget https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/33/Everything/x86_64/os/Packages/c/conntrack-tools-1.4.5-6.fc33.x86_64.rpm
 wget https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/33/Everything/x86_64/os/Packages/l/libnetfilter_cthelper-1.0.0-18.fc33.x86_64.rpm
